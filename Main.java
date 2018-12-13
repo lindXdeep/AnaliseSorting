@@ -1,23 +1,57 @@
+import Analyze.*;
+
 class Main{
     public static void main(String[] args) {
         
-        Analize analize = new Analize();
+        Analyze analyze = new Analyze();
 
-        analize.start("insertions");        //Начало алгоритма
-        for (int i = 0; i < 100; i++) {
-            analize.step();          //ш    аг любой операции
-            for (int j = 0; j < 500; j++) {
-                analize.cycle();        //итерация цикла
+        analyze.start("Insertions");        //Beginning of algorithms
+        
+        for (int i = 0; i < 10; i++) {
+            analyze.step();                 //Step operations
+            for (int j = 0; j < 5; j++) {
+                analyze.cycle();            //loop iteration
                 if(i == j )
-                    analize.compare();      //операция сравнения  
+                    analyze.compare();      //Comparison operation
             }
         }
-        analize.stop();         //Конец алгоритма
+
+        analyze.stop();                     //End of algorithms
+      
+        Analyze analyze2 = new Analyze();
+
+
+        analyze2.start("Bubble");        //Beginning of algorithms
+        
+        for (int i = 0; i < 6; i++) {
+            analyze2.step();                 //Step operations
+            for (int j = 0; j < 11; j++) {
+                analyze2.cycle();            //loop iteration
+                if(i == j )
+                    analyze2.compare();      //Comparison operation
+            }
+        }
+
+        analyze2.stop();                     //End of algorithms
        
-        analize.view();
+        Analyze analyze3 = new Analyze();
 
+        analyze3.start("sort");        //Beginning of algorithms
         
-        
+        for (int i = 0; i < 6; i++) {
+            analyze3.step();                 //Step operations
+            for (int j = 0; j < 11; j++) {
+                analyze3.cycle();            //loop iteration
+                if(i == j )
+                    analyze3.compare();      //Comparison operation
+            }
+        }
 
+        analyze3.stop();                     //End of algorithms
+
+
+
+
+        ResultsAnalyze.getInstance().viewResults();
     }
 }
