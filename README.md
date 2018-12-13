@@ -1,2 +1,2 @@
-# AnaliseSorting
+# AnalyzingSorting
 Analyzing algorithms
