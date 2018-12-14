@@ -3,19 +3,18 @@ import Sort.*;
 
 class ExampleMain{
     
-    private static int[] array = {1,9,2,9,3,88,4,7,5,6}; 
+    private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static SelectSort selectSort = null;
-
+    private static int[] array = arrayHandle.getRandomIntArray(100);
+    
     public void initializing(){
         System.out.print("Source: ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + "|");
-        }
-        selectSort = new SelectSort(array);
+        arrayHandle.printArray(array);
     }
 
     public void sortingAlgorithms(){
+
+        SelectSort selectSort = new SelectSort(array);
 
         Sorting selection = selectSort.getSorting(TypeSort.SELECTION);
         Thread selection_thread = new Thread(selection); 
