@@ -1,38 +1,40 @@
-import Analyze.*;
+import Analyze.ResultsAnalyze;
 import Sort.*;
 
 class ExampleMain{
     
     private static int[] array = {1,9,2,9,3,88,4,7,5,6}; 
     
+    private static SelectSort selectSort = null;
+
     public void initializing(){
         System.out.print("Source: ");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "|");
         }
+        selectSort = new SelectSort(array);
     }
 
     public void sortingAlgorithms(){
 
-        Sorting sort = new TestSort(array, "TestingSortinglnked");
-        Thread sort_thread = new Thread(sort); 
-               sort_thread.start();      
+        Sorting selection = selectSort.getSorting(TypeSort.SELECTION);
+        Thread selection_thread = new Thread(selection); 
+                selection_thread.start();      
         
-        Sorting sort2 = new TestSort2(array, "TestSort2");
-        Thread sort_thread2 = new Thread(sort2); 
-               sort_thread2.start();     
+        Sorting insertion = selectSort.getSorting(TypeSort.INSERTION);
+        Thread insertion_thread = new Thread(insertion); 
+                insertion_thread.start();     
         
         try {
-            sort_thread.join();
-            sort_thread2.join();  
+            selection_thread.join();
+            insertion_thread.join();  
         } catch (InterruptedException e) {
             e.getMessage();
         }
-
         
        ResultsAnalyze.getInstance().viewResults();
-
     }
+
     public static void main(String[] args) {
         
         Thread mainThread =  new Thread(new Runnable(){
