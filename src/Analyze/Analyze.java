@@ -2,8 +2,7 @@ package Analyze;
 public class Analyze{
     private String name;                //Name researching algorithm
     private int iterations;             //Total number iterations
-    private int step;       
-                //Sum steps
+    private int step;                   //Sum steps
     private int cycle;                  //Sum cycle
     private int compare;                //Sum compare
 

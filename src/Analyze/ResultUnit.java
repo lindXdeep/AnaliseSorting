@@ -84,7 +84,7 @@ public class ResultUnit{
 		this.compares = compares;
 	}
 
-	public int getTime()	{
+	public long getTime()	{
 		return this.time;
 	}
 

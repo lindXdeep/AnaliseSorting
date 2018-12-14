@@ -19,7 +19,6 @@ public class ResultsList{
             beginLink = node;
             endLink = beginLink;
         }else{
-            
             endLink.setLink(node);
             endLink = node;
         }
@@ -28,21 +27,17 @@ public class ResultsList{
 
     public void displayAllResults(){
         
-        ResultUnit print = beginLink;
-        while(print != null){
-                System.out.printf("\n\n Algorithm: %s. ", print.name);
-                System.out.printf("\n|\t\t Time: \u001B[32m  %d ms", print.time);
-                System.out.printf("\n|\t Total iterations: %d\t", print.iterations);
-                System.out.printf("\t|\tSteps: %d", print.steps);
-                System.out.printf("\t|\tCycles: %d", print.cycles);
-                System.out.printf("\t|\tCompares: %d \t|", print.compares);
-            print = print.link;
+        if(beginLink != null)
+        {
+            ResultUnit print = beginLink;
+            while(print != null){
+                    System.out.printf("\nTime: %5d ms.\t Algorithm: -> %s ", print.time, print.name);
+                    System.out.printf("\n|\t Total iterations: %4d\t", print.iterations);
+                    System.out.printf("\t|\tSteps: %d", print.steps);
+                    System.out.printf("\t|\tCycles: %d", print.cycles);
+                    System.out.printf("\t|\tCompares: %d \t|", print.compares);
+                print = print.link;
+            }
         }
-
-
-       
-        
-        
-        
     }
 }

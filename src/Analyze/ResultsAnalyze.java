@@ -5,20 +5,23 @@ public final class ResultsAnalyze{
 
     int count = 0;
 
-    private static ResultsAnalyze instance = null;
+    private static volatile ResultsAnalyze instance = null;
 
     public ResultsAnalyze(){}
 
     public static ResultsAnalyze getInstance() {
             if(instance == null){
-                instance = new ResultsAnalyze();
+                synchronized(ResultsAnalyze.class)
+                {
+                    instance = new ResultsAnalyze();
+                }
+                
             }
         return instance;
     }
 
     public void pushResult(Analyze analyze){
         resultsList.insertAtEnd(analyze);
-        
     }
 
     public void viewResults(){
