@@ -29,7 +29,8 @@ class ExampleMain{
             e.getMessage();
         }
 
-        ResultsAnalyze.getInstance().viewResults();
+        
+       ResultsAnalyze.getInstance().viewResults();
 
     }
     public static void main(String[] args) {

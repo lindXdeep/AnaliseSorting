@@ -12,7 +12,13 @@ public class TestSort2 extends ArchetypeSort{
 
         for (int i = 0; i < this.size; i++) {
             analyze.step();
-                        
+               
+            try {
+                Thread.sleep(20);
+            } catch (Exception e) {
+                //TODO: handle exception
+            }
+
             for (int j = 0; j < this.size; j++) {
                 analyze.cycle();
                 if(mainArray[i] < mainArray[j]) 

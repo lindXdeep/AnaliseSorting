@@ -14,6 +14,12 @@ public class TestSort extends ArchetypeSort{
             analyze.step();
             for (int j = 0; j < this.size; j++) {
                 
+                try {
+                    Thread.sleep(10);
+                } catch (Exception e) {
+                    //TODO: handle exception
+                }
+
                 analyze.cycle();
                 if(mainArray[i] < mainArray[j]) 
                     swap(i, j);   
