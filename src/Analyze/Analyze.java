@@ -45,6 +45,7 @@ public class Analyze{
     public void stop(){                             //End of algorithm
         this.stopTime = System.currentTimeMillis() - this.startTime;
         ResultsAnalyze.getInstance().pushResult(this);
+        System.out.println(this.name + " complet! \t -> \t" + this.stopTime + " ms.");
     }      
     
     public void view(){

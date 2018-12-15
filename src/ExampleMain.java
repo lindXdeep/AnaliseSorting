@@ -5,7 +5,7 @@ class ExampleMain{
     
     private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static int[] array = arrayHandle.getRandomIntArray(10000);
+    private static int[] array = arrayHandle.getRandomIntArray(100000);
     
     public void initializing(){
         //System.out.print("Source array: ");
@@ -45,13 +45,13 @@ class ExampleMain{
         arrayHandle.checkSequence(insertion);
         arrayHandle.checkSequence(bubble);
         arrayHandle.checkSequence(bubbleTwoForcked);
-       //arrayHandle.printArray(selection.getResultsArrray());
-       //arrayHandle.printArray(selection);
-       //arrayHandle.printArray(insertion);
-       //arrayHandle.printArray(bubble);
-        ArrayHandle.printArray(bubbleTwoForcked);
+        // arrayHandle.printArray(selection.getResultsArrray());
+        // arrayHandle.printArray(selection);
+        // arrayHandle.printArray(insertion);
+        // arrayHandle.printArray(bubble);
+        // arrayHandle.printArray(bubbleTwoForcked);
        
-       ResultsAnalyze.getInstance().viewResults();
+        ResultsAnalyze.getInstance().viewResults();
     }
 
     public static void main(String[] args) {
