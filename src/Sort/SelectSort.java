@@ -19,13 +19,19 @@ public class SelectSort{
     private TypeSort type_Selection = TypeSort.SELECTION;
     private TypeSort type_Insertion = TypeSort.INSERTION;
     private TypeSort type_Bubble = TypeSort.BUBBLE;
+    private TypeSort type_bubbleTwoForcked = TypeSort.BUBBLETWOFORCKED;
 
     public Sorting getSorting(TypeSort typeSort){
         
         switch(typeSort){
-            case SELECTION: sorting = new Selection(this.array, type_Selection.nameSort()); break; 
-            case INSERTION: sorting = new Insertion(this.array, type_Insertion.nameSort()); break; 
-            case BUBBLE:    sorting =  new Bubble(this.array, type_Bubble.nameSort());  break;
+            case SELECTION: sorting = new Selection(this.array, type_Selection.nameSort()); 
+                break; 
+            case INSERTION: sorting = new Insertion(this.array, type_Insertion.nameSort()); 
+                break; 
+            case BUBBLE:    sorting =  new Bubble(this.array, type_Bubble.nameSort());  
+                break;
+            case BUBBLETWOFORCKED: sorting = new BubbleTwoForcked(this.array, type_bubbleTwoForcked.nameSort()); 
+            break;
             default:
                 break;
         }

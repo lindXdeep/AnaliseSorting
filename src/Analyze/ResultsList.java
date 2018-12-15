@@ -28,14 +28,14 @@ public class ResultsList{
     public void displayAllResults(){
         
         if(beginLink != null)
-        {
+        {           
             ResultUnit print = beginLink;
             while(print != null){
                     System.out.printf("\nTime: %5d ms.\t Algorithm: -> %s ", print.time, print.name);
-                    System.out.printf("\n|\t Total iterations: %4d\t", print.iterations);
+                    System.out.printf("\n|\t Iterations: %4d\t", print.iterations);
                     System.out.printf("\t|\tSteps: %d", print.steps);
                     System.out.printf("\t|\tCycles: %d", print.cycles);
-                    System.out.printf("\t|\tCompares: %d \t|", print.compares);
+                    System.out.printf("\t|\tCompares: %9d \t|", print.compares);
                 print = print.link;
             }
         }

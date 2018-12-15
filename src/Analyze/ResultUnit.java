@@ -1,10 +1,10 @@
 package Analyze;
 public class ResultUnit{
     public String name;
-    public int iterations;
-    public int steps;
-    public int cycles;
-    public int compares; 
+    public long iterations;
+    public long steps;
+    public long cycles;
+    public long compares; 
     public long time;
     public ResultUnit link;
 
@@ -19,11 +19,11 @@ public class ResultUnit{
     }
 
     public ResultUnit(String name, 
-                        int iterations, 
-                        int steps, 
-                        int cycles, 
-                        int compares, 
-                        int time, 
+                        long iterations, 
+                        long steps, 
+                        long cycles, 
+                        long compares, 
+                        long time, 
                         ResultUnit link){
         this.name = name;
         this.iterations = iterations;
@@ -52,7 +52,7 @@ public class ResultUnit{
 		this.name = name;
 	}
 
-	public int getIterations()	{
+	public long getIterations()	{
 		return this.iterations;
 	}
 
@@ -60,27 +60,27 @@ public class ResultUnit{
 		this.iterations = iterations;
 	}
 
-	public int getSteps()	{
+	public long getSteps()	{
 		return this.steps;
 	}
 
-	public void setSteps(int steps)	{
+	public void setSteps(long steps)	{
 		this.steps = steps;
 	}
 
-	public int getCycles()	{
+	public long getCycles()	{
 		return this.cycles;
 	}
 
-	public void setCycles(int cycles)	{
+	public void setCycles(long cycles)	{
 		this.cycles = cycles;
 	}
 
-	public int getCompares()	{
+	public long getCompares()	{
 		return this.compares;
 	}
 
-	public void setCompares(int compares)	{
+	public void setCompares(long compares)	{
 		this.compares = compares;
 	}
 
@@ -88,7 +88,7 @@ public class ResultUnit{
 		return this.time;
 	}
 
-	public void setTime(int time)	{
+	public void setTime(long time)	{
 		this.time = time;
 	}
 

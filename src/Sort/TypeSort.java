@@ -29,6 +29,18 @@ public enum TypeSort{
         public String toString(){
             return "Bubble Sorting";
         }
+    },
+
+    BUBBLETWOFORCKED{
+
+        public String nameSort(){
+            return "Bubble Two-Forcked Sorting";
+        }
+
+        @Override
+        public String toString(){
+            return "Bubble Two-Forcked Sorting";
+        }
     };
 
     public abstract String nameSort();

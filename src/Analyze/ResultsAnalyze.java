@@ -5,7 +5,7 @@ public final class ResultsAnalyze{
 
     int count = 0;
 
-    private static volatile ResultsAnalyze instance = null;
+    private static volatile ResultsAnalyze instance = new ResultsAnalyze();
 
     public ResultsAnalyze(){}
 

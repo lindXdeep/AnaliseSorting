@@ -1,4 +1,5 @@
 import java.util.Random;
+import Sort.Sorting;
 
 public class ArrayHandle{
     
@@ -49,5 +50,24 @@ public class ArrayHandle{
                 newStrCount=0;
             } 
         } 
-    }	
+    }
+    
+    public void printArray(Sorting obj) {
+		System.out.print("\nResult: [" + obj.getName() + "]: \t");
+		printArray(obj.getResultsArrray());
+	}
+
+    public void checkSequence(Sorting obj) {
+		System.out.print("\nResult: " + obj.getName() + " -> sorted ");
+		
+		int arr[] = obj.getResultsArrray();
+		
+		for (int i = 0; i < arr.length-1; i++) {
+            if(arr[i] > arr[i+1] ) {
+                System.out.println("false");
+                return;
+            }
+		}
+		System.out.println("true");
+	}
 }

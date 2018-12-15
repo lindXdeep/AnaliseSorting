@@ -1,10 +1,10 @@
 package Analyze;
 public class Analyze{
     private String name;                //Name researching algorithm
-    private int iterations;             //Total number iterations
-    private int step;                   //Sum steps
-    private int cycle;                  //Sum cycle
-    private int compare;                //Sum compare
+    private long iterations;             //Total number iterations
+    private long step;                   //Sum steps
+    private long cycle;                  //Sum cycle
+    private long compare;                //Sum compare
 
     private long startTime;
     private long stopTime;
@@ -20,10 +20,10 @@ public class Analyze{
     }
     
     public String getName()	    {   return this.name;	    }
-	public int getIterations()  {   return this.iterations; }
-	public int getStep()        {   return this.step;       }
-	public int getCycle()       {   return this.cycle;      }
-	public int getCompare()     {   return this.compare;    }
+	public long getIterations()  {   return this.iterations; }
+	public long getStep()        {   return this.step;       }
+	public long getCycle()       {   return this.cycle;      }
+	public long getCompare()     {   return this.compare;    }
 	public long getStoptime()   {   return this.stopTime;   }
 
     public void start(String name){                 //beginning of algorithm
