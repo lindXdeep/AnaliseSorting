@@ -5,11 +5,11 @@ class ExampleMain{
     
     private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static int[] array = arrayHandle.getRandomIntArray(100000);
+    private static int[] array = arrayHandle.getRandomIntArray(10000);
     
     public void initializing(){
-        //System.out.print("Source array: ");
-        //arrayHandle.printArray(array);
+        // System.out.print("Source array: ");
+        // arrayHandle.printArray(array);
     }
 
     public void sortingAlgorithms(){
@@ -29,14 +29,19 @@ class ExampleMain{
                 bubble_thread.start();
 
         Sorting bubbleTwoForcked = sortSelect.getSorting(TypeSort.BUBBLETWOFORCKED);
-        Thread bubbleTwoForcked_thread =  new Thread(bubbleTwoForcked);
+        Thread bubbleTwoForcked_thread = new Thread(bubbleTwoForcked);
                 bubbleTwoForcked_thread.start();
+
+        Sorting shell = sortSelect.getSorting(TypeSort.SHELL);
+        Thread shell_thread = new Thread(shell);
+                shell_thread.start();
 
         try {
             selection_thread.join();
             insertion_thread.join(); 
             bubble_thread.join(); 
             bubbleTwoForcked_thread.join();
+            shell_thread.join();
         } catch (InterruptedException e) {
             e.getMessage();
         }
@@ -45,12 +50,14 @@ class ExampleMain{
         arrayHandle.checkSequence(insertion);
         arrayHandle.checkSequence(bubble);
         arrayHandle.checkSequence(bubbleTwoForcked);
+        arrayHandle.checkSequence(shell);
         // arrayHandle.printArray(selection.getResultsArrray());
         // arrayHandle.printArray(selection);
         // arrayHandle.printArray(insertion);
         // arrayHandle.printArray(bubble);
         // arrayHandle.printArray(bubbleTwoForcked);
-       
+        // arrayHandle.printArray(shell);
+
         ResultsAnalyze.getInstance().viewResults();
     }
 

@@ -47,8 +47,4 @@ public class Analyze{
         ResultsAnalyze.getInstance().pushResult(this);
         System.out.println(this.name + " complet! \t -> \t" + this.stopTime + " ms.");
     }      
-    
-    public void view(){
-        ResultsAnalyze.getInstance().viewResults();
-    }
 }

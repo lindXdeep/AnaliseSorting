@@ -20,6 +20,7 @@ public class SelectSort{
     private TypeSort type_Insertion = TypeSort.INSERTION;
     private TypeSort type_Bubble = TypeSort.BUBBLE;
     private TypeSort type_bubbleTwoForcked = TypeSort.BUBBLETWOFORCKED;
+    private TypeSort type_shell =  TypeSort.SHELL;
 
     public Sorting getSorting(TypeSort typeSort){
         
@@ -31,7 +32,8 @@ public class SelectSort{
             case BUBBLE:    sorting =  new Bubble(this.array, type_Bubble.nameSort());  
                 break;
             case BUBBLETWOFORCKED: sorting = new BubbleTwoForcked(this.array, type_bubbleTwoForcked.nameSort()); 
-            break;
+                break;
+            case SHELL: sorting = new Shell(this.array, type_shell.nameSort());
             default:
                 break;
         }

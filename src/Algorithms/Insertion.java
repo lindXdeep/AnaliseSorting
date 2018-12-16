@@ -16,6 +16,7 @@ public class Insertion extends ArchetypeSort{
         int i,j,x = 0;
 
             for (i = 0; i < size; i++) {                    
+                
                 analyze.step();
 
                 x = array[i];
@@ -24,7 +25,7 @@ public class Insertion extends ArchetypeSort{
                     
                     array[j+1] = array[j]; 
 
-                    analyze.cycle();   
+                    analyze.cycle();
                 }
 
                 array[j+1] = x;
