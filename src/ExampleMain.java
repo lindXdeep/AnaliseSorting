@@ -36,12 +36,22 @@ class ExampleMain{
         Thread shell_thread = new Thread(shell);
                 shell_thread.start();
 
+        
+            Sorting shell_Sedgewick = sortSelect.getSorting(TypeSort.SHELL_SEDGEWICK);
+            Thread shell_Sedgewick_thread = new Thread(shell_Sedgewick);
+                shell_Sedgewick_thread.start();
+               
+               
+
+                
         try {
             selection_thread.join();
             insertion_thread.join(); 
             bubble_thread.join(); 
             bubbleTwoForcked_thread.join();
             shell_thread.join();
+            shell_Sedgewick_thread.join();
+
         } catch (InterruptedException e) {
             e.getMessage();
         }
@@ -51,12 +61,14 @@ class ExampleMain{
         arrayHandle.checkSequence(bubble);
         arrayHandle.checkSequence(bubbleTwoForcked);
         arrayHandle.checkSequence(shell);
+        arrayHandle.checkSequence(shell_Sedgewick);
         // arrayHandle.printArray(selection.getResultsArrray());
         // arrayHandle.printArray(selection);
         // arrayHandle.printArray(insertion);
         // arrayHandle.printArray(bubble);
         // arrayHandle.printArray(bubbleTwoForcked);
         // arrayHandle.printArray(shell);
+        // arrayHandle.printArray(shell_Sedgewick);
 
         ResultsAnalyze.getInstance().viewResults();
     }

@@ -21,6 +21,7 @@ public class SelectSort{
     private TypeSort type_Bubble = TypeSort.BUBBLE;
     private TypeSort type_bubbleTwoForcked = TypeSort.BUBBLETWOFORCKED;
     private TypeSort type_shell =  TypeSort.SHELL;
+    private TypeSort type_shell_sedgewick =  TypeSort.SHELL_SEDGEWICK;
 
     public Sorting getSorting(TypeSort typeSort){
         
@@ -34,6 +35,9 @@ public class SelectSort{
             case BUBBLETWOFORCKED: sorting = new BubbleTwoForcked(this.array, type_bubbleTwoForcked.nameSort()); 
                 break;
             case SHELL: sorting = new Shell(this.array, type_shell.nameSort());
+                break;
+            case SHELL_SEDGEWICK: sorting = new Shell_Sedgewick(this.array, type_shell_sedgewick.nameSort());
+            
             default:
                 break;
         }
