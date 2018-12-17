@@ -1,4 +1,4 @@
-## Analyzing sorting Algorithms in multi thread
+## Analyzing sorting Algorithms in multi thread.
 
 You can use the [editor on GitHub](https://github.com/lindXdeep/AnalyzingSorting/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
@@ -13,7 +13,7 @@ Syntax highlighted code block
 
 # Header 1
 ## Header 2
-### Header 3
+### Threehader 3
 
 - Bulleted
 - List
