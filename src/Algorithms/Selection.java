@@ -19,7 +19,7 @@ public class Selection extends ArchetypeSort {
 
             for (int j = i+1; j < size; j++) {
                 
-                analyze.cycle();
+                analyze.cycle(2);
               
                 if(array[i] > array[j])
                      swap(i, j);

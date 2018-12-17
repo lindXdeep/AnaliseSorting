@@ -31,13 +31,21 @@ public class ResultsList{
         {           
             ResultUnit print = beginLink;
             while(print != null){
-                    System.out.printf("\nTime: %5d ms.\t Algorithm: -> %s ", print.time, print.name);
+                    System.out.printf("Algorithm: -> %26s -> Time: %5d ms.", print.name, print.time);
                     System.out.printf("\n|\t Iterations: %4d\t", print.iterations);
                     System.out.printf("\t|\tSteps: %d", print.steps);
-                    System.out.printf("\t|\tCycles: %d", print.cycles);
-                    System.out.printf("\t|\tCompares: %9d \t|", print.compares);
+                    System.out.printf("\t|\tCycles: %9d", print.cycles);
+                    System.out.printf("\t|\tCompares: %9d \t|\n", print.compares);
                 print = print.link;
             }
+
+            ResultUnit print2 = beginLink;
+            System.out.print("\n - - - - - - Total operations - - - - - -");
+            while(print2 != null){
+                System.out.printf("\n Algorithm: -> %26s  -> %1d", print2.name, print2.operations );
+                print2 = print2.link;
+            }
+
         }
     }
 }

@@ -21,7 +21,7 @@ public class Shell extends ArchetypeSort{
             
             for (int j = 0; j < size-d; j++) {
 
-                analyze.cycle();
+                analyze.cycle(2);
 
                if(array[j] > array[j+d])
                     swap(j, j+d);
@@ -40,12 +40,12 @@ public class Shell extends ArchetypeSort{
         int j,i,x;
         for (i = d; i < size; i++) {
             
-            analyze.step();
+            analyze.step(2);
             
             x = array[i];
             for (j = i-d; j >= 0 && array[j] > x; j-=d) {
                 
-                analyze.cycle();
+                analyze.cycle(3);
 
                 array[j+d] = array[j];    
             }    

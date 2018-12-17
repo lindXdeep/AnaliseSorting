@@ -19,7 +19,7 @@ public abstract class ArchetypeSort implements Sorting{
     }
 
     public void swap(int a, int b){
-        analyze.compare();
+        analyze.compare(3);
         int temp = array[a];
         array[a] = array[b];
         array[b] = temp;

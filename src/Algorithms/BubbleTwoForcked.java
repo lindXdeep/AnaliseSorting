@@ -19,11 +19,9 @@ public class BubbleTwoForcked extends ArchetypeSort{
 
         do {
 
-            analyze.step();
-
             for (int i = 1; i <= rightIdx; i++) {
                 
-                analyze.cycle();
+                analyze.cycle(2);
                 
                 if(array[i-1] > array[i])
                     swap(i-1, i);
@@ -34,7 +32,7 @@ public class BubbleTwoForcked extends ArchetypeSort{
             
             for(int j = rightIdx; j >= leftIdx; j--){
                 
-                analyze.cycle();
+                analyze.cycle(2);
 
                 if(array[j] > array[j+1])
                     swap(j, j+1);
@@ -43,7 +41,7 @@ public class BubbleTwoForcked extends ArchetypeSort{
 
             leftIdx = temp_redirect + 1;
 
-            analyze.step();
+            analyze.step(2);
 
         } while (leftIdx < rightIdx);
 

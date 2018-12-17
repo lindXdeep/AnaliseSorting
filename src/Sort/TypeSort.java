@@ -21,6 +21,16 @@ public enum TypeSort{
         }
     },
 
+    INSERTIONGUARDED{
+        public String nameSort(){
+            return "Insertion Guarded Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Insertion Guarded Sorting";
+        }
+    },
+
     BUBBLE{
         public String nameSort(){
             return "Bubble Sorting";

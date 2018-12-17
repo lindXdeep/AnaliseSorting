@@ -4,7 +4,8 @@ public class ResultUnit{
     public long iterations;
     public long steps;
     public long cycles;
-    public long compares; 
+    public long compares;
+    public long operations; 
     public long time;
     public ResultUnit link;
 
@@ -15,6 +16,7 @@ public class ResultUnit{
         cycles = 0;
         compares = 0;
         time = 0;
+        operations = 0;
         link = null;
     }
 
@@ -22,7 +24,8 @@ public class ResultUnit{
                         long iterations, 
                         long steps, 
                         long cycles, 
-                        long compares, 
+                        long compares,
+                        long operations, 
                         long time, 
                         ResultUnit link){
         this.name = name;
@@ -30,6 +33,7 @@ public class ResultUnit{
         this.steps = steps;
         this.cycles = cycles;
         this.compares = compares;
+        this.operations = operations;
         this.time = time;
         this.link = link;                     
     } 
@@ -40,6 +44,7 @@ public class ResultUnit{
         this.steps = unit.getStep();
         this.cycles = unit.getCycle();
         this.compares = unit.getCompare();
+        this.operations = unit.getOperations();
         this.time = unit.getStoptime();
         this.link = null;
     }
@@ -78,7 +83,11 @@ public class ResultUnit{
 
 	public long getCompares()	{
 		return this.compares;
-	}
+    }
+
+    public long getOperations()	{
+		return this.operations;
+    }
 
 	public void setCompares(long compares)	{
 		this.compares = compares;
@@ -90,6 +99,10 @@ public class ResultUnit{
 
 	public void setTime(long time)	{
 		this.time = time;
+    }
+
+    public void setOperations(long operations)	{
+		this.operations = operations;
 	}
 
 	public ResultUnit getLink()	{

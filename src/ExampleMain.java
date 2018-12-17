@@ -8,8 +8,8 @@ class ExampleMain{
     private static int[] array = arrayHandle.getRandomIntArray(10000);
     
     public void initializing(){
-        // System.out.print("Source array: ");
-        // arrayHandle.printArray(array);
+       // System.out.print("Source array: ");
+       //arrayHandle.printArray(array);
     }
 
     public void sortingAlgorithms(){
@@ -24,6 +24,10 @@ class ExampleMain{
         Thread insertion_thread = new Thread(insertion); 
                 insertion_thread.start();     
         
+        Sorting insertionGuarded = sortSelect.getSorting(TypeSort.INSERTIONGUARDED);
+        Thread insertionGuarded_thread = new Thread(insertionGuarded);
+                insertionGuarded_thread.start();
+
         Sorting bubble = sortSelect.getSorting(TypeSort.BUBBLE);
         Thread bubble_thread =  new Thread(bubble);
                 bubble_thread.start();
@@ -35,11 +39,10 @@ class ExampleMain{
         Sorting shell = sortSelect.getSorting(TypeSort.SHELL);
         Thread shell_thread = new Thread(shell);
                 shell_thread.start();
-
-        
-            Sorting shell_Sedgewick = sortSelect.getSorting(TypeSort.SHELL_SEDGEWICK);
-            Thread shell_Sedgewick_thread = new Thread(shell_Sedgewick);
-                shell_Sedgewick_thread.start();
+    
+        Sorting shell_Sedgewick = sortSelect.getSorting(TypeSort.SHELL_SEDGEWICK);
+        Thread shell_Sedgewick_thread = new Thread(shell_Sedgewick);
+            shell_Sedgewick_thread.start();
                
                
 
@@ -51,6 +54,7 @@ class ExampleMain{
             bubbleTwoForcked_thread.join();
             shell_thread.join();
             shell_Sedgewick_thread.join();
+            insertionGuarded_thread.join();
 
         } catch (InterruptedException e) {
             e.getMessage();
@@ -58,17 +62,21 @@ class ExampleMain{
                 
         arrayHandle.checkSequence(selection);
         arrayHandle.checkSequence(insertion);
+        arrayHandle.checkSequence(insertionGuarded);
         arrayHandle.checkSequence(bubble);
         arrayHandle.checkSequence(bubbleTwoForcked);
         arrayHandle.checkSequence(shell);
         arrayHandle.checkSequence(shell_Sedgewick);
+       
         // arrayHandle.printArray(selection.getResultsArrray());
         // arrayHandle.printArray(selection);
         // arrayHandle.printArray(insertion);
+        // arrayHandle.printArray(insertionGuarded);
         // arrayHandle.printArray(bubble);
         // arrayHandle.printArray(bubbleTwoForcked);
         // arrayHandle.printArray(shell);
         // arrayHandle.printArray(shell_Sedgewick);
+
 
         ResultsAnalyze.getInstance().viewResults();
     }
