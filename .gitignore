@@ -1,5 +1,6 @@
 #compiled sourse #
 ##################
 *.class
-*.json
 
+
+.gitignore
