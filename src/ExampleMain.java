@@ -5,7 +5,7 @@ class ExampleMain{
     
     private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static int[] array = arrayHandle.getRandomIntArray(10000);
+    private static int[] array = arrayHandle.getRandomIntArray(10);
     
     public void initializing(){
        // System.out.print("Source array: ");
@@ -44,8 +44,9 @@ class ExampleMain{
         Thread shell_Sedgewick_thread = new Thread(shell_Sedgewick);
             shell_Sedgewick_thread.start();
                
-               
-
+        Sorting quick = sortSelect.getSorting(TypeSort.QUICK);      
+                Thread quick_thread =  new Thread(quick);
+                        quick_thread.start();
                 
         try {
             selection_thread.join();
@@ -55,19 +56,22 @@ class ExampleMain{
             shell_thread.join();
             shell_Sedgewick_thread.join();
             insertionGuarded_thread.join();
+            quick_thread.join();
+
 
         } catch (InterruptedException e) {
             e.getMessage();
         }
                 
-        arrayHandle.checkSequence(selection);
-        arrayHandle.checkSequence(insertion);
-        arrayHandle.checkSequence(insertionGuarded);
-        arrayHandle.checkSequence(bubble);
-        arrayHandle.checkSequence(bubbleTwoForcked);
-        arrayHandle.checkSequence(shell);
-        arrayHandle.checkSequence(shell_Sedgewick);
-       
+        // arrayHandle.checkSequence(selection);
+        // arrayHandle.checkSequence(insertion);
+        // arrayHandle.checkSequence(insertionGuarded);
+        // arrayHandle.checkSequence(bubble);
+        // arrayHandle.checkSequence(bubbleTwoForcked);
+        // arrayHandle.checkSequence(shell);
+        // arrayHandle.checkSequence(shell_Sedgewick);
+        arrayHandle.checkSequence(quick);
+        
         // arrayHandle.printArray(selection.getResultsArrray());
         // arrayHandle.printArray(selection);
         // arrayHandle.printArray(insertion);
@@ -76,9 +80,9 @@ class ExampleMain{
         // arrayHandle.printArray(bubbleTwoForcked);
         // arrayHandle.printArray(shell);
         // arrayHandle.printArray(shell_Sedgewick);
+        arrayHandle.printArray(quick);
 
-
-        ResultsAnalyze.getInstance().viewResults();
+        //ResultsAnalyze.getInstance().viewResults();
     }
 
     public static void main(String[] args) {

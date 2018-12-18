@@ -23,6 +23,8 @@ public class SelectSort{
     private TypeSort type_shell =  TypeSort.SHELL;
     private TypeSort type_shell_sedgewick =  TypeSort.SHELL_SEDGEWICK;
     private TypeSort type_insertionGuarded = TypeSort.INSERTIONGUARDED;
+    private TypeSort type_quick = TypeSort.QUICK;
+
 
     public Sorting getSorting(TypeSort typeSort){
         
@@ -40,6 +42,8 @@ public class SelectSort{
             case SHELL_SEDGEWICK: sorting = new Shell_Sedgewick(this.array, type_shell_sedgewick.nameSort());
                 break;
             case INSERTIONGUARDED: sorting = new InsertionGuarded(this.array, type_insertionGuarded.nameSort());
+                break;
+            case QUICK: sorting = new Quick(this.array, type_quick.nameSort());
                 break;
             default:
                 break;

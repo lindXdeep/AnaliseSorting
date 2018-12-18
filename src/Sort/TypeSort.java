@@ -60,7 +60,7 @@ public enum TypeSort{
             return "Shell Sorting";
         }
     },
-
+    
     SHELL_SEDGEWICK{
         public String nameSort(){
             return "Sell_Sedgewick_mod Sorting";
@@ -69,8 +69,17 @@ public enum TypeSort{
         public String toString(){
             return "Sell_Sedgewick_mod Sorting";
         }
+    },
+    
+    QUICK{
+        public String nameSort(){
+            return "Quick Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Quick Sorting";
+        }
     };
-
     public abstract String nameSort();
 }
 

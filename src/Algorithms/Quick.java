@@ -10,6 +10,6 @@ public class Quick extends ArchetypeSort{
 
     @Override
     public void run() {
-       System.out.println("run run runr"); 
+        
     }
 }
