@@ -20,9 +20,10 @@ public class SelectSort{
     private TypeSort type_Insertion = TypeSort.INSERTION;
     private TypeSort type_Bubble = TypeSort.BUBBLE;
     private TypeSort type_Bubble_optim = TypeSort.BUBBLEOPTIM;
-    private TypeSort type_bubbleTwoForcked = TypeSort.BUBBLETWOFORCKED;
-    private TypeSort type_bubbleShaker = TypeSort.BUBBLESHAKER;
-    private TypeSort type_shell =  TypeSort.SHELL;
+    private TypeSort type_BubbleTwoForcked = TypeSort.BUBBLETWOFORCKED;
+    private TypeSort type_BubbleShaker = TypeSort.BUBBLESHAKER;
+    private TypeSort type_BubbleEvenOdd = TypeSort.BUBBLEEVENODD;
+    private TypeSort type_shell = TypeSort.SHELL;
     private TypeSort type_shell_sedgewick =  TypeSort.SHELL_SEDGEWICK;
     private TypeSort type_insertionGuarded = TypeSort.INSERTIONGUARDED;
     private TypeSort type_quick = TypeSort.QUICK;
@@ -39,10 +40,12 @@ public class SelectSort{
                 break;
             case BUBBLEOPTIM: sorting =  new BubbleOptim(this.array, type_Bubble_optim.nameSort());  
                 break;
-            case BUBBLETWOFORCKED: sorting = new BubbleTwoForcked(this.array, type_bubbleTwoForcked.nameSort()); 
+            case BUBBLETWOFORCKED: sorting = new BubbleTwoForcked(this.array, type_BubbleTwoForcked.nameSort()); 
                 break;
-            case BUBBLESHAKER: sorting = new BubbleShaker(this.array, type_bubbleShaker.nameSort()); 
+            case BUBBLESHAKER: sorting = new BubbleShaker(this.array, type_BubbleShaker.nameSort()); 
                 break;
+            case BUBBLEEVENODD: sorting = new BubbleEvenOdd(this.array, type_BubbleEvenOdd.nameSort()); 
+                break;    
             case SHELL: sorting = new Shell(this.array, type_shell.nameSort());
                 break;
             case SHELL_SEDGEWICK: sorting = new Shell_Sedgewick(this.array, type_shell_sedgewick.nameSort());

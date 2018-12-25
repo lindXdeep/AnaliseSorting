@@ -9,7 +9,7 @@ class ExampleMain{
     
     public void initializing(){
        // System.out.print("Source array: ");
-       // arrayHandle.printArray(array);
+       //arrayHandle.printArray(array);
     }
 
     public void sortingAlgorithms(){
@@ -44,6 +44,9 @@ class ExampleMain{
         Thread bubbleShaker_thread = new Thread(bubbleShaker);
                 bubbleShaker_thread.start();
 
+        Sorting bubbleEvenOdd = sortSelect.getSorting(TypeSort.BUBBLEEVENODD);
+        Thread bubbleEventOdd_thread = new Thread(bubbleEvenOdd);
+                bubbleEventOdd_thread.start();
 
         Sorting shell = sortSelect.getSorting(TypeSort.SHELL);
         Thread shell_thread = new Thread(shell);
@@ -80,6 +83,7 @@ class ExampleMain{
         arrayHandle.checkSequence(bubbleOptim);
         arrayHandle.checkSequence(bubbleTwoForcked);
         arrayHandle.checkSequence(bubbleShaker);
+        arrayHandle.checkSequence(bubbleEvenOdd);
         arrayHandle.checkSequence(shell);
         arrayHandle.checkSequence(shell_Sedgewick);
         arrayHandle.checkSequence(quick);
@@ -93,6 +97,7 @@ class ExampleMain{
         // arrayHandle.printArray(bubbleOptim);
         // arrayHandle.printArray(bubbleTwoForcked);
         // arrayHandle.printArray(bubbleShaker);
+        // arrayHandle.printArray(bubbleEvenOdd);
         // arrayHandle.printArray(shell);
         // arrayHandle.printArray(shell_Sedgewick);
         // arrayHandle.printArray(quick);
