@@ -12,9 +12,8 @@ public class Bubble extends ArchetypeSort{
     public void run() {
 
         analyze.start(nameSort);
-
+        
         for (int i = 0; i < size; i++) {
-
             analyze.step();
 
             for (int j = 0; j < size-1-i; j++) {
@@ -22,10 +21,9 @@ public class Bubble extends ArchetypeSort{
                 analyze.cycle();
 
                 if(array[j] > array[j+1])
-                    swap(j, j+1);
+                     swap(j, j+1);
             }
-        }
-        
-        analyze.stop();
+         }
+         analyze.stop();
     }
 }

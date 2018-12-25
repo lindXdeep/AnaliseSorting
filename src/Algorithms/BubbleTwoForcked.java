@@ -18,13 +18,15 @@ public class BubbleTwoForcked extends ArchetypeSort{
         analyze.start(nameSort);
 
         do {
-
+            boolean swapped = false;
             for (int i = 1; i <= rightIdx; i++) {
                 
                 analyze.cycle(2);
                 
-                if(array[i-1] > array[i])
+                if(array[i-1] > array[i]){
                     swap(i-1, i);
+                    swapped = true;
+                }
                 temp_redirect = i;
             }
 
@@ -34,13 +36,16 @@ public class BubbleTwoForcked extends ArchetypeSort{
                 
                 analyze.cycle(2);
 
-                if(array[j] > array[j+1])
+                if(array[j] > array[j+1]){
                     swap(j, j+1);
+                    swapped = true;
+                }
                 temp_redirect = j;
             }
 
             leftIdx = temp_redirect + 1;
-
+            if(swapped == false)
+                break;
             analyze.step(2);
 
         } while (leftIdx < rightIdx);

@@ -40,6 +40,15 @@ public enum TypeSort{
             return "Bubble Sorting";
         }
     },
+    BUBBLEOPTIM{
+        public String nameSort(){
+            return "Bubble Stopped Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Bubble Stopped Sorting";
+        }
+    },
 
     BUBBLETWOFORCKED{
         public String nameSort(){
@@ -48,6 +57,16 @@ public enum TypeSort{
         @Override
         public String toString(){
             return "Bubble Two-Forcked Sorting";
+        }
+    },
+
+    BUBBLESHAKER{
+        public String nameSort(){
+            return "Bubble Shaker Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Bubble Shaker Sorting";
         }
     },
 

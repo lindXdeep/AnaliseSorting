@@ -1,6 +1,7 @@
 #compiled sourse #
 ##################
 *.class
+*.log
 
 
 .gitignore
