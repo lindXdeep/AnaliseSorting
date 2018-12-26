@@ -5,7 +5,7 @@ class ExampleMain{
     
     private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static int[] array = arrayHandle.getRandomIntArray(100000);
+    private static int[] array = arrayHandle.getRandomIntArray(50000);
     
     public void initializing(){
        // System.out.print("Source array: ");

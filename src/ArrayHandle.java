@@ -57,17 +57,33 @@ public class ArrayHandle{
 		printArray(obj.getResultsArrray());
 	}
 
+    
     public void checkSequence(Sorting obj) {
-		System.out.print("\nResult: " + obj.getName() + " -> sorted ");
-		
-		int arr[] = obj.getResultsArrray();
-		
-		for (int i = 0; i < arr.length-1; i++) {
+        
+        int arr[] = obj.getResultsArrray();
+        
+        for (int i = 0; i < arr.length-1; i++) {
             if(arr[i] > arr[i+1] ) {
-                System.out.println("false");
+                System.err.print("\nResult: " + obj.getName() + " -> sorted false");
                 return;
             }
-		}
-		System.out.println("true");
-	}
+        }
+        System.out.print("\nResult: " + obj.getName() + " -> sorted true");
+        
+    }
 }
+
+// Old format
+// public void checkSequence(Sorting obj) {
+//     System.out.print("\nResult: " + obj.getName() + " -> sorted ");
+    
+//     int arr[] = obj.getResultsArrray();
+    
+//     for (int i = 0; i < arr.length-1; i++) {
+//         if(arr[i] > arr[i+1] ) {
+//             System.err.print("\tfalse");
+//             return;
+//         }
+//     }
+//     System.out.println("true");
+// }
