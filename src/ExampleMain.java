@@ -5,7 +5,7 @@ class ExampleMain{
     
     private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static int[] array = arrayHandle.getRandomIntArray(50000);
+    private static int[] array = arrayHandle.getRandomIntArray(100000);
     
     public void initializing(){
        // System.out.print("Source array: ");
@@ -48,6 +48,10 @@ class ExampleMain{
         Thread bubbleEventOdd_thread = new Thread(bubbleEvenOdd);
                 bubbleEventOdd_thread.start();
 
+        Sorting comb = sortSelect.getSorting(TypeSort.COMB);
+        Thread comb_thread =  new Thread(comb);
+                comb_thread.start();
+
         Sorting shell = sortSelect.getSorting(TypeSort.SHELL);
         Thread shell_thread = new Thread(shell);
                 shell_thread.start();
@@ -59,6 +63,10 @@ class ExampleMain{
         Sorting quick = sortSelect.getSorting(TypeSort.QUICK);      
                 Thread quick_thread =  new Thread(quick);
                         quick_thread.start();
+
+        Sorting merge = sortSelect.getSorting(TypeSort.MERGE);
+        Thread merge_thread = new Thread(merge);
+                merge_thread.start();
                 
         try {
             selection_thread.join();
@@ -67,10 +75,12 @@ class ExampleMain{
             bubble_optim_thread.join();
             bubbleTwoForcked_thread.join();
             bubbleShaker_thread.join();
+            comb_thread.join();
             shell_thread.join();
             shell_Sedgewick_thread.join();
             insertionGuarded_thread.join();
             quick_thread.join();
+            merge_thread.join();
 
         } catch (InterruptedException e) {
             e.getMessage();
@@ -84,9 +94,11 @@ class ExampleMain{
         arrayHandle.checkSequence(bubbleTwoForcked);
         arrayHandle.checkSequence(bubbleShaker);
         arrayHandle.checkSequence(bubbleEvenOdd);
+        arrayHandle.checkSequence(comb);
         arrayHandle.checkSequence(shell);
         arrayHandle.checkSequence(shell_Sedgewick);
         arrayHandle.checkSequence(quick);
+        arrayHandle.checkSequence(merge);
 
         
         // arrayHandle.printArray(selection.getResultsArrray());
@@ -98,9 +110,11 @@ class ExampleMain{
         // arrayHandle.printArray(bubbleTwoForcked);
         // arrayHandle.printArray(bubbleShaker);
         // arrayHandle.printArray(bubbleEvenOdd);
+        // arrayHandle.printArray(comb);
         // arrayHandle.printArray(shell);
         // arrayHandle.printArray(shell_Sedgewick);
         // arrayHandle.printArray(quick);
+        // arrayHandle.printArray(merge);
 
         ResultsAnalyze.getInstance().viewResults();
     }

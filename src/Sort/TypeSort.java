@@ -80,6 +80,15 @@ public enum TypeSort{
             return "Bubble Even-Odd Sorting";
         }
     },
+    COMB{
+        public String nameSort(){
+            return "Comb Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Comb Sorting";
+        }
+    },
 
     SHELL{
         public String nameSort(){
@@ -108,6 +117,16 @@ public enum TypeSort{
         @Override
         public String toString(){
             return "Quick Sorting";
+        }
+    },
+    
+    MERGE{
+        public String nameSort(){
+            return "Merge Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Merge Sorting";
         }
     };
     public abstract String nameSort();

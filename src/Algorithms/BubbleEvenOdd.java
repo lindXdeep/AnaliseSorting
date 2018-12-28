@@ -27,8 +27,7 @@ public class BubbleEvenOdd extends ArchetypeSort{
                         swap(j-1, j);
                         swapped = true;
                     }
-                        
-                }
+                 }
             }else{
                 for (int j = size-2; j > 1; j--) {
 

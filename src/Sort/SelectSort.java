@@ -23,10 +23,13 @@ public class SelectSort{
     private TypeSort type_BubbleTwoForcked = TypeSort.BUBBLETWOFORCKED;
     private TypeSort type_BubbleShaker = TypeSort.BUBBLESHAKER;
     private TypeSort type_BubbleEvenOdd = TypeSort.BUBBLEEVENODD;
-    private TypeSort type_shell = TypeSort.SHELL;
-    private TypeSort type_shell_sedgewick =  TypeSort.SHELL_SEDGEWICK;
-    private TypeSort type_insertionGuarded = TypeSort.INSERTIONGUARDED;
-    private TypeSort type_quick = TypeSort.QUICK;
+    private TypeSort type_Comb = TypeSort.COMB;
+    private TypeSort type_Shell = TypeSort.SHELL;
+    private TypeSort type_Shell_sedgewick =  TypeSort.SHELL_SEDGEWICK;
+    private TypeSort type_InsertionGuarded = TypeSort.INSERTIONGUARDED;
+    private TypeSort type_Quick = TypeSort.QUICK;
+    private TypeSort type_Merge = TypeSort.MERGE;
+
     
 
     public Sorting getSorting(TypeSort typeSort){
@@ -45,14 +48,18 @@ public class SelectSort{
             case BUBBLESHAKER: sorting = new BubbleShaker(this.array, type_BubbleShaker.nameSort()); 
                 break;
             case BUBBLEEVENODD: sorting = new BubbleEvenOdd(this.array, type_BubbleEvenOdd.nameSort()); 
-                break;    
-            case SHELL: sorting = new Shell(this.array, type_shell.nameSort());
+                break; 
+            case COMB: sorting = new Comb(this.array, type_Comb.nameSort()); 
+                break;        
+            case SHELL: sorting = new Shell(this.array, type_Shell.nameSort());
                 break;
-            case SHELL_SEDGEWICK: sorting = new Shell_Sedgewick(this.array, type_shell_sedgewick.nameSort());
+            case SHELL_SEDGEWICK: sorting = new Shell_Sedgewick(this.array, type_Shell_sedgewick.nameSort());
                 break;
-            case INSERTIONGUARDED: sorting = new InsertionGuarded(this.array, type_insertionGuarded.nameSort());
+            case INSERTIONGUARDED: sorting = new InsertionGuarded(this.array, type_InsertionGuarded.nameSort());
                 break;
-            case QUICK: sorting = new Quick(this.array, type_quick.nameSort());
+            case QUICK: sorting = new Quick(this.array, type_Quick.nameSort());
+                break;
+            case MERGE: sorting = new Merge(this.array, type_Merge.nameSort());
                 break;
             default:
                 break;
