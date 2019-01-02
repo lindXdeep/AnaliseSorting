@@ -31,10 +31,16 @@ public abstract class ArchetypeSort implements Sorting{
     }
 
     @Override
+    public int[] getResultsArrray(int size){
+        
+        int cutArray[] =  new int[size+1];
+        for (int i = 0; i < size+1; i++)
+            cutArray[i] = array[i];
+        return cutArray;
+    }
+
+    @Override
     public String getName() {
         return this.nameSort;
     }
-
-    
-
 }

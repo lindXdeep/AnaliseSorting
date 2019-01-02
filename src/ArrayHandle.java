@@ -55,11 +55,15 @@ public class ArrayHandle{
     public void printArray(Sorting obj) {
 		System.out.print("\nResult: [" + obj.getName() + "]: \t");
 		printArray(obj.getResultsArrray());
-	}
+    }
 
+    public void printArray(Sorting obj, int to_notValid){
+        System.out.print("\nError: [" + obj.getName() + "]: \t"); 
+        printArray(obj.getResultsArrray(to_notValid));
+        System.out.print(". . .\n"); 
+    }
     
-    public void checkSequence(Sorting obj) {
-        
+    public void checkSequence(Sorting obj) {                //View sorting or not sorting without array
         int arr[] = obj.getResultsArrray();
         
         for (int i = 0; i < arr.length-1; i++) {
@@ -69,7 +73,25 @@ public class ArrayHandle{
             }
         }
         System.out.print("\nResult: " + obj.getName() + " -> sorted true");
-        
+    }
+
+    public void checkSequence(Sorting obj, boolean value) {     //View sorted or not, with print array antil to falure 
+       
+        int count_to_falure = 1;
+
+        int arr[] = obj.getResultsArrray();
+         
+            for (int i = 0; i < arr.length-1; i++) {
+                if(arr[i] > arr[i+1] ) {
+                    System.err.print("\nResult: " + obj.getName() + " -> sorted false");
+                    if (value && count_to_falure <= 100 ){
+                        printArray(obj, count_to_falure);
+                    }
+                    return;
+                }
+                count_to_falure++;
+            }
+        System.out.print("\nResult: " + obj.getName() + " -> sorted true");
     }
 }
 

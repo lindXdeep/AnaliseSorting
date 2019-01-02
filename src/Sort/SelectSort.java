@@ -29,6 +29,7 @@ public class SelectSort{
     private TypeSort type_InsertionGuarded = TypeSort.INSERTIONGUARDED;
     private TypeSort type_Quick = TypeSort.QUICK;
     private TypeSort type_Merge = TypeSort.MERGE;
+    private TypeSort type_Heap = TypeSort.HEAP;
 
     
 
@@ -61,6 +62,8 @@ public class SelectSort{
                 break;
             case MERGE: sorting = new Merge(this.array, type_Merge.nameSort());
                 break;
+            case HEAP: sorting = new Heap(this.array, type_Heap.nameSort());
+                break;    
             default:
                 break;
         }

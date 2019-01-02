@@ -128,6 +128,16 @@ public enum TypeSort{
         public String toString(){
             return "Merge Sorting";
         }
+    },
+
+    HEAP{
+        public String nameSort(){
+            return "Heap Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Heap Sorting";
+        }
     };
     public abstract String nameSort();
 }

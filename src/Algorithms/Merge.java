@@ -81,13 +81,5 @@ public class Merge extends ArchetypeSort{
 
             array[left+t] = temp[t];
         }
-           
-        
-       
-    
-
-
     }
-
-    
 }

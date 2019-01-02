@@ -8,8 +8,9 @@ class ExampleMain{
     private static int[] array = arrayHandle.getRandomIntArray(100000);
     
     public void initializing(){
-       // System.out.print("Source array: ");
-       //arrayHandle.printArray(array);
+//        System.out.print("Source array: ");
+//        arrayHandle.printArray(array);
+//        System.out.println();
     }
 
     public void sortingAlgorithms(){
@@ -67,6 +68,10 @@ class ExampleMain{
         Sorting merge = sortSelect.getSorting(TypeSort.MERGE);
         Thread merge_thread = new Thread(merge);
                 merge_thread.start();
+        
+        Sorting heap = sortSelect.getSorting(TypeSort.HEAP);
+        Thread heap_thread = new Thread(heap);
+                heap_thread.start();
                 
         try {
             selection_thread.join();
@@ -81,6 +86,7 @@ class ExampleMain{
             insertionGuarded_thread.join();
             quick_thread.join();
             merge_thread.join();
+            heap_thread.join();
 
         } catch (InterruptedException e) {
             e.getMessage();
@@ -99,7 +105,7 @@ class ExampleMain{
         arrayHandle.checkSequence(shell_Sedgewick);
         arrayHandle.checkSequence(quick);
         arrayHandle.checkSequence(merge);
-
+        arrayHandle.checkSequence(heap);
         
         // arrayHandle.printArray(selection.getResultsArrray());
         // arrayHandle.printArray(selection);
@@ -115,8 +121,9 @@ class ExampleMain{
         // arrayHandle.printArray(shell_Sedgewick);
         // arrayHandle.printArray(quick);
         // arrayHandle.printArray(merge);
+        // arrayHandle.printArray(heap);
 
-        ResultsAnalyze.getInstance().viewResults();
+        // ResultsAnalyze.getInstance().viewResults();
     }
 
     public static void main(String[] args) {
