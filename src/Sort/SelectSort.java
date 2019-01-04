@@ -30,6 +30,8 @@ public class SelectSort{
     private TypeSort type_Quick = TypeSort.QUICK;
     private TypeSort type_Merge = TypeSort.MERGE;
     private TypeSort type_Heap = TypeSort.HEAP;
+    private TypeSort type_Bucket = TypeSort.BUCKET;
+    private TypeSort type_Counting = TypeSort.COUNTING;
 
     
 
@@ -63,7 +65,11 @@ public class SelectSort{
             case MERGE: sorting = new Merge(this.array, type_Merge.nameSort());
                 break;
             case HEAP: sorting = new Heap(this.array, type_Heap.nameSort());
-                break;    
+                break; 
+            case BUCKET: sorting = new Bucket(this.array, type_Bucket.nameSort());
+                break;     
+            case COUNTING: sorting = new Counting(this.array, type_Counting.nameSort());
+                break;     
             default:
                 break;
         }

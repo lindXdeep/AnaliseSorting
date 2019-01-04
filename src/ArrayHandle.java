@@ -69,6 +69,7 @@ public class ArrayHandle{
         for (int i = 0; i < arr.length-1; i++) {
             if(arr[i] > arr[i+1] ) {
                 System.err.print("\nResult: " + obj.getName() + " -> sorted false");
+                System.err.println( (i-2) + " [" + (i-1) + "] > [" + (i) + "] " + (i+1) + " " + (i+2));
                 return;
             }
         }

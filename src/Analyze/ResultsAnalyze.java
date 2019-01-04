@@ -25,7 +25,7 @@ public final class ResultsAnalyze{
     }
 
     public void viewResults(){
-        System.out.println("\n - - - - - Detailed analysis of algorithms - - - - - ");
+        System.out.println("\n\n - - - - - Detailed analysis of algorithms - - - - - ");
         resultsList.displayAllResults();
     }
 }

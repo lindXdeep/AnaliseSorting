@@ -5,12 +5,12 @@ class ExampleMain{
     
     private static ArrayHandle arrayHandle = ArrayHandle.getInstance();
     
-    private static int[] array = arrayHandle.getRandomIntArray(100000);
+    private static int[] array = arrayHandle.getRandomIntArray(1000000);
     
     public void initializing(){
-//        System.out.print("Source array: ");
-//        arrayHandle.printArray(array);
-//        System.out.println();
+        // System.out.print("Source array: ");
+        // arrayHandle.printArray(array);
+        // System.out.println();
     }
 
     public void sortingAlgorithms(){
@@ -72,12 +72,21 @@ class ExampleMain{
         Sorting heap = sortSelect.getSorting(TypeSort.HEAP);
         Thread heap_thread = new Thread(heap);
                 heap_thread.start();
+
+        Sorting bucket = sortSelect.getSorting(TypeSort.BUCKET);
+        Thread bucket_thread = new Thread(bucket);
+                bucket_thread.start();
+
+        Sorting counting = sortSelect.getSorting(TypeSort.COUNTING);
+        Thread counting_thread =  new Thread(counting);
+                counting_thread.start();
                 
         try {
             selection_thread.join();
             insertion_thread.join(); 
             bubble_thread.join(); 
             bubble_optim_thread.join();
+            bubbleEventOdd_thread.join();
             bubbleTwoForcked_thread.join();
             bubbleShaker_thread.join();
             comb_thread.join();
@@ -87,6 +96,8 @@ class ExampleMain{
             quick_thread.join();
             merge_thread.join();
             heap_thread.join();
+            bucket_thread.join();
+            counting_thread.join();
 
         } catch (InterruptedException e) {
             e.getMessage();
@@ -106,6 +117,9 @@ class ExampleMain{
         arrayHandle.checkSequence(quick);
         arrayHandle.checkSequence(merge);
         arrayHandle.checkSequence(heap);
+        arrayHandle.checkSequence(bucket);
+
+        arrayHandle.checkSequence(counting);
         
         // arrayHandle.printArray(selection.getResultsArrray());
         // arrayHandle.printArray(selection);
@@ -122,8 +136,9 @@ class ExampleMain{
         // arrayHandle.printArray(quick);
         // arrayHandle.printArray(merge);
         // arrayHandle.printArray(heap);
+        // arrayHandle.printArray(counting);
 
-        // ResultsAnalyze.getInstance().viewResults();
+        ResultsAnalyze.getInstance().viewResults();
     }
 
     public static void main(String[] args) {

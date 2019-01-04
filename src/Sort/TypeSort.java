@@ -40,7 +40,7 @@ public enum TypeSort{
             return "Bubble Sorting";
         }
     },
-
+    //FIXME: change name on BUBBLE_OPTIM
     BUBBLEOPTIM{
         public String nameSort(){
             return "Bubble Stopped Sorting";
@@ -50,7 +50,7 @@ public enum TypeSort{
             return "Bubble Stopped Sorting";
         }
     },
-
+    //FIXME: change name on TWOFORCKED_BUBBLE_MOD
     BUBBLETWOFORCKED{
         public String nameSort(){
             return "Bubble Two-Forcked Sorting";
@@ -60,7 +60,7 @@ public enum TypeSort{
             return "Bubble Two-Forcked Sorting";
         }
     },
-
+    //FIXME: change name on SHAKER_BUBBLE_MOD
     BUBBLESHAKER{
         public String nameSort(){
             return "Bubble Shaker Sorting";
@@ -70,7 +70,7 @@ public enum TypeSort{
             return "Bubble Shaker Sorting";
         }
     },
-
+    //FIXME: change name on EVEN_ODD
     BUBBLEEVENODD{
         public String nameSort(){
             return "Bubble Even-Odd Sorting";
@@ -80,6 +80,7 @@ public enum TypeSort{
             return "Bubble Even-Odd Sorting";
         }
     },
+    
     COMB{
         public String nameSort(){
             return "Comb Sorting";
@@ -138,7 +139,28 @@ public enum TypeSort{
         public String toString(){
             return "Heap Sorting";
         }
+    },
+
+    BUCKET{
+        public String nameSort(){
+            return "Bucket Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Bucket Sorting";
+        }
+    },
+
+    COUNTING{
+        public String nameSort(){
+            return "Counting Sorting";
+        }
+        @Override
+        public String toString(){
+            return "Counting Sorting";
+        }
     };
+
     public abstract String nameSort();
 }
 

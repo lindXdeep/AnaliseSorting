@@ -25,6 +25,10 @@ public class ResultsList{
         size++;
     }
 
+    //TODO: make sorting results on Time
+    //TODO: make sorting results on total operations
+  
+
     public void displayAllResults(){
         
         if(beginLink != null)
