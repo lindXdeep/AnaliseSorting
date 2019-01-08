@@ -4,10 +4,10 @@
   
 In this version it can analyze the following parameters:
   * *Steps* - for how many steps the algorithm was performed.
-  **Cycles* - sum of internal cycles.
-  **Compares* - how many comparisons did the algorithm for solving the sorting problem
-  **Iteration* - total number of iterations was needed to solve the problem
-  **Total operations* - The total sum of all operations, including other comparisons and other calculation steps in of algorithm
+  * *Cycles* - sum of internal cycles.
+  * *Compares* - how many comparisons did the algorithm for solving the sorting problem
+  * *Iteration* - total number of iterations was needed to solve the problem
+  * *Total operations* - The total sum of all operations, including other comparisons and other calculation steps in of algorithm
 
   
 
