@@ -14,19 +14,29 @@
 ## Getting Started
 
   To demonstrate the full functionality of API, so to say "out of the box" -  for that I wrote a file ExampleMain.java. You can run it right away.
-
+  
 ```
 -javac ExampleMain.java 
 ```
 and
-
 ```
 java ExampleMain
 ```
 
+### Break down into end to end tests
+
+First your need get random array, for test, and set what num elements you want
 
 ```markdown
-  private static int[] array = arrayHandle.getRandomIntArray(1000);
+  private static int[] array = arrayHandle.getRandomIntArray(1000);    
+```
+all you neede  include that function in ExampleMain.java
+
+```markdown
+public void sortingAlgorithms()
+{
+    //... there 
+}
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
