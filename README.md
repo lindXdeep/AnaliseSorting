@@ -2,7 +2,7 @@
 
   This is my program for analyze a algorithms. For now, this is a beta version. 0.1. Today it can analyze the sorting algorithms in multi-threaded mode. 
   
-In this version it can analyze the following parameters:
+###In this version it can analyze the following parameters:
   * *Steps* - for how many steps the algorithm was performed.
   * *Cycles* - sum of internal cycles.
   * *Compares* - how many comparisons did the algorithm for solving the sorting problem
@@ -10,10 +10,15 @@ In this version it can analyze the following parameters:
   * *Total operations* - The total sum of all operations, including other comparisons and other calculation steps in of algorithm
 
   
-
 ## Getting Started
 
   To demonstrate the full functionality of API, so to say "out of the box" -  for that I wrote a file ExampleMain.java. You can run it right away.
+
+--
+
+--
+
+
 
 ```markdown
 Syntax highlighted code block
