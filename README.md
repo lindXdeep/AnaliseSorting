@@ -30,7 +30,8 @@ First your need get random array, for test, and set what num elements you want
 ```markdown
   private static int[] array = arrayHandle.getRandomIntArray(1000);    
 ```
-all you neede  include that function in ExampleMain.java
+
+all you need is in this function, which is in ExampleMain.java
 
 ```markdown
 public void sortingAlgorithms()
