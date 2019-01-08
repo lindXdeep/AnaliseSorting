@@ -10,6 +10,30 @@
   * *Iteration* - total number of iterations was needed to solve the problem
   * *Total operations* - The total sum of all operations, including other comparisons and other calculation steps in of algorithm
 
+
+### So far I have added several algorithms and you can test them.
+
+* Selection Sorting
+
+* Bucket Sorting 
+* Bubble Stopped Sorting 
+* Even-Odd Sorting
+* Shaker Sorting 
+* Two-Forcked Sorting 
+* Comb Sorting
+
+* Insertion Sorting
+* Insertion with Guarded Sorting 
+
+* Shell Sorting 
+* Sell_Sedgewick_mod Sorting  
+
+* Quick Sorting 
+* Merge Sorting 
+* Heap Sorting 
+* Radix Sorting
+
+also you can have added yours :)
   
 ## Getting Started
 
@@ -25,10 +49,16 @@ java ExampleMain
 
 ### Break down into end to end tests
 
-First your need get random array, for test, and set what num elements you want
+*First:* your need get random array, for test, and set what num elements you want
 
 ```markdown
   private static int[] array = arrayHandle.getRandomIntArray(1000);    
+```
+
+*Second:* for what to see the results, at the end of your main function, you need to add
+
+```markdown
+  ResultsAnalyze.getInstance().viewResults();
 ```
 
 all you need is in this function, which is in ExampleMain.java
@@ -40,12 +70,36 @@ public void sortingAlgorithms()
 }
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### For example:
 
-### Jekyll Themes
+```markdown
+public void sortingAlgorithms()
+{
+    //add array for sorting, onece time!
+    SelectSort sortSelect = new SelectSort(array);    
+    
+    //Add thread
+    Sorting name_sorting = sortSelect.getSorting(TypeSort.NAMESORT);
+    Thread name_thread = new Thread(name_sorting); 
+           name_thread.start(); 
+    //...
+         
+    //... join thread, it is important     
+   try {
+          name_thread.join();
+          //...
+        } catch (InterruptedException e) {
+            e.getMessage();
+        }
+        
+        //helper class to check right sorting
+        arrayHandle.checkSequence(name_sorting);
+        
+        //if you still want to print the resulting array
+        //arrayHandle.printArray(selection);
+        
+        //view results
+       ResultsAnalyze.getInstance().viewResults();
+}
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lindXdeep/AnalyzingSorting/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
