@@ -1,8 +1,6 @@
-## Analyzing sorting Algorithms in multi thread.
+# Analyzing sorting Algorithms in multi thread.
 
-You can use the [editor on GitHub](https://github.com/lindXdeep/AnalyzingSorting/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+That is my program for analyze a algorithms. For now, this is a beta version. 0.1. Today it can analyze the sorting algorithms in multi-threaded mode. To demonstrate the full functionality of API, so to say "out of the box" -  for that I wrote a file ExampleMain.java. You can run it right away.
 
 ### Markdown
 
