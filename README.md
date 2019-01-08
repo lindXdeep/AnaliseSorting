@@ -3,6 +3,7 @@
   This is my program for analyze a algorithms. For now, this is a beta version. 0.1. Today it can analyze the sorting algorithms in multi-threaded mode. 
   
 ### In this version it can analyze and get following informations:
+  * *Time* - algorithm execution time
   * *Steps* - for how many steps the algorithm was performed.
   * *Cycles* - sum of internal cycles.
   * *Compares* - how many comparisons did the algorithm for solving the sorting problem
@@ -22,24 +23,10 @@ and
 ```
 java ExampleMain
 ```
-
+  private static int[] array = arrayHandle.getRandomIntArray(1000);
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Threehader 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
