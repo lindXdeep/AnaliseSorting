@@ -23,10 +23,10 @@ and
 ```
 java ExampleMain
 ```
-  private static int[] array = arrayHandle.getRandomIntArray(1000);
+
 
 ```markdown
-
+  private static int[] array = arrayHandle.getRandomIntArray(1000);
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
