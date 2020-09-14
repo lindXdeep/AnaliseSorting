@@ -1,7 +1,9 @@
 #compiled sourse #
 ##################
-*.class
+/bin/*.class
+/bin/
 *.log
-
-
+*.yml
+project.code-workspace
 .gitignore
+/.vscode/
